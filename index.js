@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const TelegramBot = require('node-telegram-bot-api');
 const ytDlp = require('yt-dlp-exec');
 const ffmpegPath = require('ffmpeg-static');
@@ -7,12 +5,12 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-// Load API keys securely
+// Load API keys from environment variables (set in Koyeb)
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 
 if (!token || !YOUTUBE_API_KEY) {
-  console.error('❌ Missing API keys! Set TELEGRAM_BOT_TOKEN and YOUTUBE_API_KEY in .env');
+  console.error('❌ Missing API keys! Set TELEGRAM_BOT_TOKEN and YOUTUBE_API_KEY in Koyeb.');
   process.exit(1);
 }
 
@@ -102,3 +100,5 @@ bot.onText(/\/play (.+)/, async (msg, match) => {
     bot.sendMessage(chatId, '❌ An error occurred.');
   }
 });
+
+console.log("✅ Bot is running...");
