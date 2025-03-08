@@ -1,12 +1,13 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Telegram bot for playing YouTube music",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
+  "keywords": ["telegram", "bot", "music", "youtube"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,9 +15,9 @@
     "axios": "^1.7.9",
     "ffmpeg-static": "^5.2.0",
     "node-telegram-bot-api": "^0.66.0",
-    "telegram-bot-api": "^2.0.1",
     "youtube-search-api": "^1.2.2",
     "yt-dlp-exec": "^1.0.2",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "^4.11.5",
+    "dotenv": "^16.0.3"
   }
 }
