@@ -1,5 +1,5 @@
 {
-  "name": "nodejs",
+  "name": "nodejs-bot",
   "version": "1.0.0",
   "description": "A Telegram bot for playing YouTube music",
   "main": "index.js",
@@ -11,13 +11,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^18.0.6",
     "axios": "^1.7.9",
+    "dotenv": "^16.0.3",
     "ffmpeg-static": "^5.2.0",
     "node-telegram-bot-api": "^0.66.0",
     "youtube-search-api": "^1.2.2",
     "yt-dlp-exec": "^1.0.2",
     "ytdl-core": "^4.11.5",
-    "dotenv": "^16.0.3"
+    "array.prototype.findindex": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
   }
 }
